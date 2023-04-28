@@ -13,3 +13,5 @@ Curso: Visión Robótica
 * Práctica 10: Calibración de cámara pinhole
 * Práctica 11: Visión estéreo
 * Práctica 12: Flujo óptico
+* Práctica 13: Structure From Motion
+* Práctica 14: SLAM
