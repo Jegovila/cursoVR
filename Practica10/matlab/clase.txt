@@ -1,5 +1,0 @@
-cameraCalibrator
-%28mm
-
-I = imread('1.jpg');
-Iu = undistortImage(I,cameraParams);
