@@ -112,7 +112,7 @@ while True:
     #
     # alpha_value = (cv2.getTrackbarPos('alpha', 'alphablend') )/ 100
     #
-    # outImage = cv2.addWeighted(img, alpha_value, src, 1-alpha_value, 0)
+    # outImage = cv2.addWeighted(img, alpha_value, src_gray, 1-alpha_value, 0)
     # cv2.imshow('alphablend',outImage)
 
     if cv2.waitKey(1) & 0xFF == ord("q"):
