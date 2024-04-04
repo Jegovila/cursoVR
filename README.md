@@ -14,4 +14,5 @@ Curso: Visión Robótica
 * Práctica 11: Visión estéreo
 * Práctica 12: Flujo óptico
 * Práctica 13: Structure From Motion
-* Práctica 14: SLAM
+* Práctica 14: Seguimiento de Objetos
+* Práctica 15: SLAM
