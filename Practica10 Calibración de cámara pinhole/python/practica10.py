@@ -81,6 +81,12 @@ for i in range(len(tvecs)):
     ax.plot([x, x + P1[0] * 50], [y, y + P1[1] * 50], [z, z - P1[2] * 50], color='g')
     ax.plot([x, x + P2[0] * 50], [y, y + P2[1] * 50], [z, z - P2[2] * 50], color='b')
 
+    # Las líneas anteriores pueden dar error dependiendo de la versión de numpy.
+    # si es el caso, cambiarlas por:
+    #ax.plot([x, x + float(P0[0][0]) * 50], [y, y + float(P0[1][0]) * 50], [z, z - float(P0[2][0]) * 50], color='r')
+    #ax.plot([x, x + float(P1[0][0]) * 50], [y, y + float(P1[1][0]) * 50], [z, z - float(P1[2][0]) * 50], color='g')
+    #ax.plot([x, x + float(P2[0][0]) * 50], [y, y + float(P2[1][0]) * 50], [z, z - float(P2[2][0]) * 50], color='b')
+
     X, Y = np.meshgrid(np.arange(x, x + P0[0] * 50), np.arange(y, y + P1[1] * 25))
     Z = -1 * (((-P2[0]*(X-x)-P2[1]*(Y-y))/P2[2])-z)
     #plt.contour(X, Y, Z, colors='black');
