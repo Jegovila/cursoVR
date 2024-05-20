@@ -10,22 +10,34 @@ cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
 fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(12, 6))
+fig.suptitle("Transformada de Hough")
 
 while True:
-
     _, src = cap.read()
     src = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
     dst = cv2.Canny(src, 50, 200, None, 3)
 
     h, theta, d = hough_line(dst)
-    ax0.imshow(np.log(1 + h), extent=[np.rad2deg(theta[-1]), np.rad2deg(theta[0]), d[-1], d[0]], aspect='auto')
+    _, t_peak, d_peak = hough_line_peaks(h, theta, d)
+    
+    ax0.clear()
+    ax1.clear()
 
+    ax0.imshow(np.log(1 + h), extent=[np.rad2deg(theta[-1]), np.rad2deg(theta[0]), d[-1], d[0]], aspect='auto')
     ax1.imshow(src, cmap=cm.gray)
     row1, col1 = dst.shape
+
     for _, angle, dist in zip(*hough_line_peaks(h, theta, d)):
-        y0 = (dist - 0 * np.cos(angle)) / np.sin(angle)
-        y1 = (dist - col1 * np.cos(angle)) / np.sin(angle)
-        ax1.plot((0, col1), (y0, y1), '-r')
+        if np.sin(angle) != 0:
+            y0 = (dist - 0 * np.cos(angle)) / np.sin(angle)
+            y1 = (dist - col1 * np.cos(angle)) / np.sin(angle)
+            ax1.plot((0, col1), (y0, y1), '-r')
+
+    for theta, dist in zip(t_peak, d_peak):
+        ax0.scatter(-np.rad2deg(theta), dist, s=5, c="red")
+        ax0.set_xlim([90, -90])
+        ax0.set_title("Espacio parámetros Hough")
+
     ax1.axis((0, col1, row1, 0))
     ax1.set_title('Lineas detectadas')
     ax1.set_axis_off()
