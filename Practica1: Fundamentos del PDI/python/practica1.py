@@ -51,6 +51,20 @@ while True:
 
             dst[x + t][y + t] = gray[i][j]
 
+    # Usando las funciones de opencv
+    # scale = 100
+    # rows, cols = gray.shape
+    # M = np.float32([[1, 0, t], [0, 1, t]])
+    # dst = cv2.warpAffine(src, M, (cols, rows))
+    # R = cv2.getRotationMatrix2D(((cols - 1) / 2.0, (rows - 1) / 2.0), theta, 1)
+    # dst = cv2.warpAffine(dst, R, (cols, rows))
+
+    # width = int(gray.shape[1] * scale / 100)
+    # height = int(gray.shape[0] * scale / 100)
+    # dim = (width, height)
+    # dst = cv2.resize(dst, dim, interpolation=cv2.INTER_AREA)
+
+	
     # Rellenar espacios negros
     # for i in range(dst.shape[0]-1):
     #     for j in range(dst.shape[1]-1):
