@@ -95,7 +95,7 @@ while True:
 
 
     # ------------ PRACTICA ---------------------
-    # I_diff = np.abs(Ig_ref - src)
+    # I_diff = cv2.subtract(Ig_ref,src) #cv2.subtract(src,Ig_ref)
     # _, I_diff_bin = cv2.threshold(I_diff, 80, 255, cv2.THRESH_BINARY)
     # 
     # im_salida = cv2.erode(I_diff_bin, kernel, iterations=3)
