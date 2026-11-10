@@ -6,7 +6,7 @@ ruta_script = Path(__file__).resolve().parent
 # Cargar el clasificador de detección de rostros preentrenado
 # Para ver más modelos preentrenados:
 # https://github.com/opencv/opencv/tree/master/data/haarcascades
-# Descargar el xml en la carpeta donde esté el este script
+# Descargar el xml en la carpeta donde se encuentre este script
 
 face_cascade_rostro = cv2.CascadeClassifier(str(ruta_script) + '/haarcascade_frontalface_default.xml')
 #face_cascade = cv2.CascadeClassifier(str(ruta_script) + 'haarcascade_profileface.xml')
