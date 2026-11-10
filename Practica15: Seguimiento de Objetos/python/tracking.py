@@ -18,8 +18,7 @@ OPENCV_OBJECT_TRACKERS = {
     "mil": cv2.TrackerMIL_create,
     "tld": cv2.legacy.TrackerTLD_create,
     "medianflow": cv2.legacy.TrackerMedianFlow_create,
-    "mosse": cv2.legacy.TrackerMOSSE_create,
-    "goturn": cv2.TrackerGOTURN_create
+    "mosse": cv2.legacy.TrackerMOSSE_create
 }
 
 at = "csrt"
