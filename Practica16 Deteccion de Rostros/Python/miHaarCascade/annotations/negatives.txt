@@ -1,0 +1,6 @@
+../dataset/negative/image_00001.jpg
+../dataset/negative/image_00002.jpg
+../dataset/negative/image_00003.jpg
+../dataset/negative/image_00004.jpg
+../dataset/negative/image_00005.jpg
+../dataset/negative/image_00006.jpg

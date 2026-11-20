@@ -1,0 +1,7 @@
+../dataset/positive/image_00001.jpg 1 124 56 199 220
+../dataset/positive/image_00002.jpg 1 169 54 159 243
+../dataset/positive/image_00003.jpg 1 160 54 187 249
+../dataset/positive/image_00004.jpg 1 208 31 206 270
+../dataset/positive/image_00005.jpg 1 208 67 203 228
+../dataset/positive/image_00006.jpg 1 223 49 194 193
+../dataset/positive/image_00007.jpg 1 318 63 134 169
